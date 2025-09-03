@@ -2,20 +2,23 @@ name: WatchTower
 
 on:
   schedule:
-    - cron: "*/20 * * * *"   # every 20 minutes
-  workflow_dispatch:         # lets you run it manually from the Actions tab
+    - cron: "*/20 * * * *"   # runs every 20 minutes
+  workflow_dispatch:         # lets you run it manually from Actions tab
 
 jobs:
   run-watchtower:
     runs-on: ubuntu-latest
+    env:                      # <-- define secrets here so ALL steps see them
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
       - name: Install dependencies
         run: |
@@ -23,7 +26,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run WatchTower
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python watchtower.py
+
