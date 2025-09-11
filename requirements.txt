@@ -1,2 +1,5 @@
-feedparser
 requests
+feedparser
+vaderSentiment
+numpy
+
