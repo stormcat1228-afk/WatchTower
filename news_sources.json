@@ -1,0 +1,19 @@
+{
+  "sources": [
+    { "name": "CryptoPanic Trending", "url": "https://cryptopanic.com/rss/trending/", "category": "crypto", "weight": 1.2 },
+    { "name": "CoinDesk",            "url": "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml", "category": "crypto", "weight": 1.1 },
+    { "name": "Cointelegraph",       "url": "https://cointelegraph.com/rss",          "category": "crypto", "weight": 1.0 },
+    { "name": "Decrypt",             "url": "https://decrypt.co/feed",                "category": "crypto", "weight": 1.0 },
+    { "name": "Bitcoin Magazine",    "url": "https://bitcoinmagazine.com/.rss",       "category": "crypto", "weight": 1.0 },
+
+    { "name": "Google News: Bitcoin",   "url": "https://news.google.com/rss/search?q=bitcoin&hl=en-US&gl=US&ceid=US:en",   "category": "crypto",      "weight": 0.9 },
+    { "name": "Google News: Ethereum",  "url": "https://news.google.com/rss/search?q=ethereum&hl=en-US&gl=US&ceid=US:en",  "category": "crypto",      "weight": 0.9 },
+    { "name": "Google News: Altcoins",  "url": "https://news.google.com/rss/search?q=altcoin%20OR%20altcoins&hl=en-US&gl=US&ceid=US:en", "category": "crypto", "weight": 0.9 },
+
+    { "name": "Fed Press/All",       "url": "https://www.federalreserve.gov/feeds/press_all.xml", "category": "macro", "weight": 1.2 },
+    { "name": "BLS News Releases",   "url": "https://www.bls.gov/feeds/news_release_all.xml",     "category": "macro", "weight": 1.1 },
+
+    { "name": "Binance Blog",        "url": "https://www.binance.com/en/blog/feed",  "category": "exchange", "weight": 1.0 },
+    { "name": "Coinbase Blog",       "url": "https://blog.coinbase.com/feed",        "category": "exchange", "weight": 1.0 }
+  ]
+}
