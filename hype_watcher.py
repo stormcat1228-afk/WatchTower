@@ -212,3 +212,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+if __name__ == "__main__": MIN_SCORE_TO_ALERT = 0.75
